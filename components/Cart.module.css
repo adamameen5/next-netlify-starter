@@ -1,0 +1,304 @@
+.cart {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  border-bottom: 1px solid #e0e0e0;
+  background-color: #f8f9fa;
+}
+
+.billInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.billInfo h2 {
+  margin: 0;
+  color: #333;
+  font-size: 1.1rem;
+}
+
+.itemCount {
+  color: #6c757d;
+  font-size: 0.85rem;
+}
+
+.billActions {
+  display: flex;
+  gap: 8px;
+}
+
+.newBillButton, .pauseBillButton {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: background 0.2s;
+}
+
+.newBillButton:hover {
+  background: #0056b3;
+}
+
+.pauseBillButton {
+  background: #ffc107;
+  color: #212529;
+}
+
+.pauseBillButton:hover {
+  background: #e0a800;
+}
+
+.onHoldInfo {
+  padding: 8px 20px;
+  background-color: #fff3cd;
+  color: #856404;
+  font-size: 0.85rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.items {
+  flex: 1;
+  overflow-y: auto;
+  padding: 0;
+}
+
+.emptyCart {
+  text-align: center;
+  color: #6c757d;
+  margin: 40px 0;
+  font-style: italic;
+}
+
+.tableHeader {
+  display: grid;
+  grid-template-columns: 2fr 0.8fr 1.2fr 0.8fr 0.3fr;
+  gap: 10px;
+  padding: 12px 20px;
+  background-color: #f8f9fa;
+  font-weight: bold;
+  font-size: 0.85rem;
+  color: #495057;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.headerItem, .headerQty, .headerSalesperson, .headerTotal, .headerActions {
+  display: flex;
+  align-items: center;
+}
+
+.headerQty {
+  justify-content: center;
+}
+
+.headerTotal {
+  justify-content: flex-end;
+}
+
+.cartItem {
+  display: grid;
+  grid-template-columns: 2fr 0.8fr 1.2fr 0.8fr 0.3fr;
+  gap: 10px;
+  align-items: center;
+  padding: 12px 20px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.cartItem:last-child {
+  border-bottom: none;
+}
+
+.itemInfo {
+  min-width: 0;
+}
+
+.itemInfo h4 {
+  margin: 0 0 2px 0;
+  font-size: 0.9rem;
+  color: #333;
+  word-wrap: break-word;
+}
+
+.itemPrice {
+  margin: 0;
+  color: #6c757d;
+  font-size: 0.8rem;
+}
+
+.quantityControls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.quantityButton {
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 0.8rem;
+  transition: all 0.2s;
+}
+
+.quantityButton:hover {
+  background: #e9ecef;
+  border-color: #adb5bd;
+}
+
+.quantity {
+  font-weight: bold;
+  min-width: 16px;
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+.salespersonSelect {
+  display: flex;
+  align-items: center;
+}
+
+.salespersonDropdown {
+  width: 100%;
+  padding: 4px 8px;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  background-color: white;
+}
+
+.salespersonDropdown:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.itemTotal {
+  font-weight: bold;
+  color: #007bff;
+  text-align: right;
+  font-size: 0.85rem;
+}
+
+.removeButton {
+  background: #dc3545;
+  color: white;
+  border: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  line-height: 1;
+  transition: background 0.2s;
+}
+
+.removeButton:hover {
+  background: #c82333;
+}
+
+.footer {
+  padding: 15px 20px;
+  border-top: 1px solid #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.actions {
+  flex: 1;
+}
+
+.clearButton {
+  background: #dc3545;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: background 0.2s;
+}
+
+.clearButton:hover {
+  background: #c82333;
+}
+
+.total {
+  font-size: 1.1rem;
+  color: #333;
+  font-weight: bold;
+}
+
+.checkoutButton {
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+
+.checkoutButton:hover {
+  background: #218838;
+}
+
+@media (max-width: 768px) {
+  .tableHeader, .cartItem {
+    grid-template-columns: 2fr 0.6fr 1fr 0.7fr 0.3fr;
+    gap: 8px;
+    padding: 10px 15px;
+  }
+  
+  .tableHeader {
+    font-size: 0.75rem;
+  }
+  
+  .itemInfo h4 {
+    font-size: 0.85rem;
+  }
+  
+  .itemPrice {
+    font-size: 0.75rem;
+  }
+  
+  .salespersonDropdown {
+    font-size: 0.75rem;
+    padding: 3px 5px;
+  }
+  
+  .footer {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .actions {
+    width: 100%;
+    text-align: center;
+  }
+}

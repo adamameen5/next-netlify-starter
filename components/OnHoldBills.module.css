@@ -1,0 +1,235 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: white;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 700px;
+  max-height: 80vh;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #e0e0e0;
+  background-color: #f8f9fa;
+}
+
+.header h2 {
+  margin: 0;
+  color: #333;
+  font-size: 1.3rem;
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 4px;
+  color: #6c757d;
+  transition: all 0.2s;
+}
+
+.closeButton:hover {
+  background-color: #e9ecef;
+  color: #333;
+}
+
+.content {
+  padding: 0;
+  max-height: calc(80vh - 80px);
+  overflow-y: auto;
+}
+
+.emptyState {
+  padding: 40px 20px;
+  text-align: center;
+  color: #6c757d;
+  font-style: italic;
+}
+
+.billsList {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.billCard {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 16px;
+  background-color: #fff;
+  transition: box-shadow 0.2s;
+}
+
+.billCard:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.billHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.billHeader h3 {
+  margin: 0;
+  color: #333;
+  font-size: 1.1rem;
+}
+
+.pausedTime {
+  color: #6c757d;
+  font-size: 0.85rem;
+}
+
+.billInfo {
+  margin-bottom: 12px;
+}
+
+.billStats {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.billStats span {
+  color: #495057;
+  font-size: 0.9rem;
+}
+
+.billTotal {
+  font-weight: bold;
+  color: #007bff;
+  font-size: 1rem !important;
+}
+
+.billItems {
+  background-color: #f8f9fa;
+  border-radius: 6px;
+  padding: 12px;
+  margin-bottom: 12px;
+}
+
+.billItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 0;
+  font-size: 0.85rem;
+}
+
+.itemName {
+  color: #495057;
+}
+
+.itemPrice {
+  color: #007bff;
+  font-weight: 500;
+}
+
+.moreItems {
+  color: #6c757d;
+  font-size: 0.8rem;
+  font-style: italic;
+  text-align: center;
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid #dee2e6;
+}
+
+.billActions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.recallButton, .deleteButton {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: all 0.2s;
+}
+
+.recallButton {
+  background-color: #28a745;
+  color: white;
+}
+
+.recallButton:hover {
+  background-color: #218838;
+}
+
+.deleteButton {
+  background-color: #dc3545;
+  color: white;
+}
+
+.deleteButton:hover {
+  background-color: #c82333;
+}
+
+@media (max-width: 768px) {
+  .modal {
+    width: 95%;
+    max-height: 90vh;
+  }
+  
+  .header {
+    padding: 15px;
+  }
+  
+  .header h2 {
+    font-size: 1.1rem;
+  }
+  
+  .billsList {
+    padding: 15px;
+    gap: 12px;
+  }
+  
+  .billCard {
+    padding: 12px;
+  }
+  
+  .billHeader {
+    flex-direction: column;
+    gap: 4px;
+    align-items: flex-start;
+  }
+  
+  .pausedTime {
+    font-size: 0.8rem;
+  }
+  
+  .billActions {
+    justify-content: stretch;
+    margin-top: 12px;
+  }
+  
+  .recallButton, .deleteButton {
+    flex: 1;
+    text-align: center;
+  }
+}
