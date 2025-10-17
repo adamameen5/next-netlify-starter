@@ -11,6 +11,33 @@ body {
   box-sizing: border-box;
 }
 
+/* POS System specific styles */
+#__next {
+  min-height: 100vh;
+}
+
+button {
+  font-family: inherit;
+}
+
+input {
+  font-family: inherit;
+}
+
+/* Utility classes */
+.text-center {
+  text-align: center;
+}
+
+.mb-0 {
+  margin-bottom: 0;
+}
+
+.mt-0 {
+  margin-top: 0;
+}
+
+/* Legacy styles for other components */
 main {
   padding: 5rem 0;
   flex: 1;
